@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+<<<<<<< Updated upstream
     avCaptureSession = [[AVCaptureSession alloc] init];
     AVCaptureDevice *audioCaptureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError *error = nil;
@@ -62,6 +63,9 @@
     customPreviewLayer.frame = CGRectMake(0, 200, CGRectGetWidth(self.view.frame), 300);
     customPreviewLayer.affineTransform = CGAffineTransformMakeRotation(M_PI/2);
     [self.view.layer addSublayer:customPreviewLayer];
+=======
+    self.urlTestFiled.text = @"rtmp://192.168.2.103:1935/live1/room1";
+>>>>>>> Stashed changes
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection{
@@ -94,6 +98,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+<<<<<<< Updated upstream
 - (IBAction)openButtonTapped:(id)sender {
     if (!avCaptureSession.isRunning) {
         [avCaptureSession startRunning];
@@ -107,6 +112,9 @@
 }
 
 - (IBAction)transtionButtonTapped:(id)sender {
+=======
+- (IBAction)playButtonTapped:(id)sender {
+>>>>>>> Stashed changes
     
 }
 
